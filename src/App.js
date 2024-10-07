@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
+import ProfileCard from './ProfileCard';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ProfileCard
+        imageSrc={`${process.env.PUBLIC_URL}/th.jpeg`}
+        name="Harini Kumar"
+        location="Karur, India"
+        description="A passionate developer focused on building innovative solutions for real-world problems."
+        skills={['React', 'JavaScript', 'CSS', 'Node.js']}
+        linkedinUrl="https://www.linkedin.com/in/harini-k-748389259/"
+        githubUrl="https://github.com/har-kumar"
+      />
     </div>
   );
 }
